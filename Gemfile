@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#gemspec unless ENV["USE_INSTALLED_GUARD"] == "1"
+gem 'rake'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -35,6 +37,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '>= 2.13.1'
+  #gem 'guard-rspec', '>= 2.2'
 end
 
 group :test do
@@ -45,6 +48,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
+  #gem 'guard'
+  #gem 'guard-bundler', require: false
 end
 
 group :doc do
